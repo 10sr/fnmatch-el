@@ -3,12 +3,14 @@ language: emacs-lisp
 sudo: false
 env:
   - EMACS=emacs24
+  - EMACS=emacs23
 addons:
   apt:
     sources:
       - cassou-emacs
     packages:
       - emacs24
+      - emacs23
 before_script:
   - $EMACS --version
 script: make test emacs=$EMACS
